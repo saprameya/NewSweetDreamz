@@ -1,0 +1,44 @@
+:root{
+    font-size: 62.5%;
+
+    /* document colors */
+    --primary-clr: #fde994; 
+    --accent-clr-dark: #83580b; 
+    --font-clr: #d9b650; 
+    /* --secondary-clr: #f5dd7b;  */
+
+    /* font sizes */
+    --main-font-size: 1.2rem;
+    --header-font-size: 2rem;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    font-size: var(--main-font-size);
+    color: var(--font-clr);
+}
+
+
+
+.hero_wrapper{
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/brownie_background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode;
+    min-height: 50vh;
+}
+
+.hero_header, .hero_content{
+    display: flex;
+    background: black;
+    /* text-align: center; */
+    /* transform: translateY(); */
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+
+
+}
