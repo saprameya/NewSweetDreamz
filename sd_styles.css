@@ -66,7 +66,7 @@ body{
 
 .card{
     border-radius: 0.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     
     
 }
@@ -101,13 +101,19 @@ body{
 
 
 
-@media (hover:hover){
+@media (hover) {
 
-    .card_wrapper{
-        transform: translateY(calc(var(--section-height) - 4rem));
+    .card{
+        overflow: hidden;
     }
-    .card_wrapper :hover{
-        transform: translateY(-20rem);
+
+    .card >.card_wrapper{
+        transform: translateY(calc(var(--section-height) - 5rem));
+    }
+    .card  :hover {
+        transform: translateY(0);
+        transition: transform 1000ms ease;
+        overflow: visible;
     }
 }
 
