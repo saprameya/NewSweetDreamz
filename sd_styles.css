@@ -74,7 +74,7 @@ body{
     
 }
 
-.card_wrapper{
+.card_section .card_wrapper{
     background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
         hsl(24 64% 16%/ 0.5),
         hsl(24 64% 16%/ 0.3)
@@ -113,26 +113,43 @@ body{
 }
 
 .explore_card{
-    color: black;
-    background-color: white;
     height: 100%;
 
 }
+
+
 #menu_card{
     background-image: url(images/menu.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
+
 }
 
 #contact_us_card{
     background-image: url(images/contact-us.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
+
 }
 #reviews_card{
     background-image: url(images/reviews.jpg);
+
+}
+
+.explore_section .explore_card{
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+.explore_section .card_wrapper{
+    margin-top: 25%;
+    padding: 0 1rem;
+}
+
+.explore_section .card_wrapper h2{
+    background-color: hsl(0 0% 0% /0.5);
+}
+
+.explore_section button{
+    background-color: var(--primary-clr);
+    color: var(--accent-clr-dark);
+    border-radius: 0.5rem;
 }
 footer{
     min-height: calc(var(--section-height)/3);
@@ -145,14 +162,14 @@ footer{
         overflow: hidden;
     }
 
-    .card >.card_wrapper{
+    .card_section .card >.card_wrapper{
         transform: translateY(calc(var(--section-height) - 5rem));
     }
-    .card:hover .card_wrapper, .card:focus-within .card_wrapper{    
+    .card_section .card:hover .card_wrapper{    
         transform: translateY(calc(var(--section-height) - 20rem));
         transition: transform 1000ms ease;
         overflow: visible;
-       background-color: hsl(24 64% 16%/ 0.7);
+        background-color: hsl(24 64% 16%/ 0.7);
 
     }
 
@@ -165,6 +182,11 @@ footer{
     #dbl_choc_chip_card:hover {
         background-image: url(images/dbl_choc_chip2.jpg);
     }
+
+    .explore_section .card_wrapper{
+        transform: translateY(0);
+        background-color: transparent;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -173,6 +195,11 @@ footer{
         display: grid;
         grid-template-columns: 1fr;
         min-height: calc(var(--section-height)*3);
+        gap: 1rem;
+    }
+
+    .explore_section{
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     
@@ -184,5 +211,10 @@ footer{
         grid-template-columns: 1fr;
         min-height: calc(var(--section-height)*3);
 
+    }
+
+    .explore_section{
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
