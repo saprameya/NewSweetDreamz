@@ -4,7 +4,8 @@
     /* document colors */
     --primary-clr: hsl(49, 96%, 79%); 
     --accent-clr-dark: hsl(39, 85%, 28%); 
-    --font-clr: hsl(45, 64%, 58%); 
+    /* --font-clr: hsl(45, 64%, 58%);  */
+    --font-clr: hsl(49, 96%, 79%); 
     /* --secondary-clr: #f5dd7b;  */
 
     /* font sizes */
@@ -21,6 +22,7 @@ body{
     font-size: var(--main-font-size);
     color: var(--font-clr);
     box-sizing: border-box;
+    background-color: var(--primary-clr);
 
 }
 
@@ -71,7 +73,7 @@ body{
     
 }
 
-.card *{
+.card_wrapper{
     background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
         hsl(24 64% 16%/ 0.5),
         hsl(24 64% 16%/ 0.3)
@@ -98,7 +100,9 @@ body{
     min-height: 100%;
 }
 
-
+footer{
+    min-height: calc(var(--section-height)/3);
+}
 
 
 @media (hover) {
@@ -110,10 +114,22 @@ body{
     .card >.card_wrapper{
         transform: translateY(calc(var(--section-height) - 5rem));
     }
-    .card  :hover {
-        transform: translateY(0);
+    .card:hover .card_wrapper, .card:focus-within .card_wrapper{    
+        transform: translateY(calc(var(--section-height) - 20rem));
         transition: transform 1000ms ease;
         overflow: visible;
+       background-color: hsl(24 64% 16%/ 0.7);
+
+    }
+
+    #brownie_card:hover {
+        background-image: url(images/brownies2.jpg);
+    }
+    #choc_chip_card:hover {
+        background-image: url(images/choc_chip2.jpg);
+    }
+    #dbl_choc_chip_card:hover {
+        background-image: url(images/dbl_choc_chip2.jpg);
     }
 }
 
@@ -126,4 +142,13 @@ body{
         gap: 1rem;
     }
     
+}
+
+@media screen and (min-width:768px) and (max-width:1027px) {
+
+    .card_section{ 
+        grid-template-columns: 1fr;
+        min-height: calc(var(--section-height)*3);
+
+    }
 }
