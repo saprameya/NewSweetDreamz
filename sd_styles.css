@@ -2,21 +2,26 @@
     font-size: 62.5%;
 
     /* document colors */
-    --primary-clr: #fde994; 
-    --accent-clr-dark: #83580b; 
-    --font-clr: #d9b650; 
+    --primary-clr: hsl(49, 96%, 79%); 
+    --accent-clr-dark: hsl(39, 85%, 28%); 
+    --font-clr: hsl(45, 64%, 58%); 
     /* --secondary-clr: #f5dd7b;  */
 
     /* font sizes */
     --main-font-size: 1.2rem;
     --header-font-size: 2rem;
 
+    --section-height: 50vh;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 body{
     font-size: var(--main-font-size);
     color: var(--font-clr);
+    box-sizing: border-box;
+
 }
 
 
@@ -27,17 +32,92 @@ body{
     background-image: url(images/brownie_background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 50vh;
+    min-height: var(--section-height);
+    margin-bottom: 1rem;
 }
 
-.hero_header, .hero_content{
+.hero_content_wrapper{
     display: flex;
-    background: black;
-    /* text-align: center; */
-    /* transform: translateY(); */
+    flex-direction: column;
+    background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
+        hsl(24 64% 16%/ 0.5),
+        hsl(24 64% 16%/ 0.3)
+       );
     align-items: center;
-    /* text-align: center; */
     justify-content: center;
+    min-height: calc(var(--section-height)/4);
+    transform: translateY(calc(var(--section-height)*3/8));
+}
+
+.hero_header{
+    font-size: 3rem;
+}
+
+.card_section{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: var(--section-height);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    column-gap: 1rem;
+}
+
+.card{
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+    
+}
+
+.card *{
+    background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
+        hsl(24 64% 16%/ 0.5),
+        hsl(24 64% 16%/ 0.3)
+       );
+}
 
 
+
+#brownie_card{
+    background-image: url(images/brownies1.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+#choc_chip_card{
+    background-image: url(images/choc_chip1.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+#dbl_choc_chip_card{
+    background-image: url(images/dbl_choc_chip1.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+
+
+
+@media (hover:hover){
+
+    .card_wrapper{
+        transform: translateY(calc(var(--section-height) - 4rem));
+    }
+    .card_wrapper :hover{
+        transform: translateY(-20rem);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .card_section{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: calc(var(--section-height)*3);
+        gap: 1rem;
+    }
+    
 }
