@@ -64,7 +64,7 @@ body{
 .navbar ul{
     flex-direction: column;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 100vw;
     text-align: center;
     list-style: none;
@@ -90,6 +90,23 @@ body{
     border-radius: 0.5rem;
     
 }
+
+
+
+#cart_card{
+    background-color: red;
+    min-height: var(--section-height);
+    min-width: 100%;
+    color: var(--accent-clr-dark);
+    /* transform: scale(0.1); */
+    transition: all 500ms ease;
+    display: none;
+}
+
+.cart_link{
+    cursor: pointer;
+}
+
 
 .card_section .card_wrapper{
     background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
@@ -193,10 +210,12 @@ footer{
 
     .hero:hover .navbar{
         transform: translateY(calc(var(--section-height)/8));
-        transition: all 500ms;
+        transition: all 500ms ease;
         background-color: hsl(24 64% 16%/ 0.7);
 
     }
+
+
     .card{
         overflow: hidden;
     }
