@@ -148,6 +148,7 @@ body{
     color: var(--accent-clr-dark);
     border-radius: 0.5rem;
     text-decoration: none;
+    padding: 0.5rem;
 }
 footer{
     min-height: calc(var(--section-height)/3);
