@@ -4,14 +4,11 @@
     /* document colors */
     --primary-clr: hsl(49, 96%, 79%); 
     --accent-clr-dark: hsl(39, 85%, 28%); 
-    /* --font-clr: hsl(45, 64%, 58%);  */
     --font-clr: hsl(49, 96%, 79%); 
-    /* --secondary-clr: #f5dd7b;  */
 
     /* font sizes */
     --main-font-size: 1.2rem;
     --header-font-size: 2rem;
-
     --section-height: 50vh;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -34,7 +31,7 @@ body{
     background-image: url(images/brownie_background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: var(--section-height);
+    min-height: calc(var(--section-height)/2);
     margin-bottom: 1rem;
 }
 
@@ -48,7 +45,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: calc(var(--section-height)/4);
-    transform: translateY(calc(var(--section-height)*3/8));
+    transform: translateY(calc(var(--section-height)/8));
 }
 
 .hero_header{
@@ -146,10 +143,11 @@ body{
     background-color: hsl(0 0% 0% /0.5);
 }
 
-.explore_section button{
+.explore_section button,.explore_section button a{
     background-color: var(--primary-clr);
     color: var(--accent-clr-dark);
     border-radius: 0.5rem;
+    text-decoration: none;
 }
 footer{
     min-height: calc(var(--section-height)/3);
