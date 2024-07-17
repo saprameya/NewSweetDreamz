@@ -55,14 +55,33 @@ body{
     color: var(--accent-clr-dark);
     font-size: 3rem;
 }
+
+.navbar{
+    min-height: calc(var(--section-height)/8);
+
+}
+
+.navbar ul{
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100vw;
+    text-align: center;
+    list-style: none;
+    font-size: 2rem;
+}
+
+.navbar a{
+    color: var(--font-clr);
+    text-decoration: none;
+}
 .card_section{
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-height: var(--section-height);
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 0 ;
     column-gap: 1rem;
 }
 
@@ -157,6 +176,26 @@ footer{
 
 @media (hover) {
 
+    .hero{
+        overflow: hidden;
+    }
+
+    .hero_header,.hero_content{
+    transform: translateY(calc(var(--section-height)/12));
+
+    }
+
+    .navbar{
+        transform: translateY(calc(var(--section-height)/4));
+        overflow: hidden;
+    }
+
+    .hero:hover .navbar{
+        transform: translateY(calc(var(--section-height)/8));
+        transition: all 500ms;
+        background-color: hsl(24 64% 16%/ 0.7);
+
+    }
     .card{
         overflow: hidden;
     }
@@ -189,6 +228,18 @@ footer{
 }
 
 @media screen and (max-width:767px) {
+
+    .navbar ul{
+        width: 100%;
+        padding: 0;
+    }
+    .navbar a{
+        font-size: 1.5rem;
+    }
+
+    .card_wrapper{
+        padding: 0.5rem;
+    }
     .card_section{
     
         display: grid;
@@ -206,6 +257,14 @@ footer{
 
 @media screen and (min-width:768px) and (max-width:1027px) {
 
+    .navbar ul{
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
     .card_section{ 
         grid-template-columns: 1fr;
         min-height: calc(var(--section-height)*3);
