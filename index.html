@@ -30,28 +30,32 @@
                             <a href="reviews.html" class="navbar_link">Reviews</a>
                         </li>
                         <li>
-                            <div data-cart-target="#cart_card" class="navbar_link cart_link" id="cart_link" >Cart</div>
+                            <div class="cart_wrapper">
+                                <div data-cart-target="#cart_card" class="navbar_link cart_link" id="cart_link" >Cart</div>
+
+                            </div>
 
                         </li>
                     </ul>
-                    <div class="card .cart_card" id="cart_card">
-                        <div class="card_wrapper">
-                            <div class="cart_header">
-                                <h2>Shopping cart</h2>
-                                <button data-cart-close-button class="cart_close_button">&times</button>
-                            </div>
-                            <p></p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
         </div>
 
     </div>
-    
+
+    <div class="card .cart_card" id="cart_card">
+        <div class="card_wrapper">
+            <div class="cart_header">
+                <h2>Shopping cart</h2>
+                <button data-cart-close-button class="cart_close_button">&times</button>
+            </div>
+            <p></p>
+        </div>
+    </div>
     <div class="section_heading">Some of our treats</div>
-    <div class="card_section">
+    <div class="card_section" id="treats_section">
         <div class="card" id="brownie_card">
             <div class="card_wrapper">
                 <h2>Decadent Brownies</h2>

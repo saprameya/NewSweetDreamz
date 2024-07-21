@@ -33,6 +33,8 @@ body{
     background-size: cover;
     min-height: calc(var(--section-height)/2);
     margin-bottom: 1rem;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .hero_content_wrapper{
@@ -106,8 +108,9 @@ body{
     background-color: var(--primary-clr);
     border: none;
     float: right;
-    margin-left: 60%;
+    margin-left: 75%;
     font-size: 2rem;
+    cursor: pointer;
 }
 .card_section .card_wrapper{
     background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
@@ -115,20 +118,22 @@ body{
         hsl(24 64% 16%/ 0.3)
        );
 }
-
+#treats_section{
+    z-index: 8;
+}
 #cart_card{
     position: fixed;
-    top: 300%;
+    top: 50%;
     left: 50%;
-    z-index: 1000;
     background-color: var(--primary-clr);
     opacity: 1;
-    min-height: var(--section-height);
-    min-width: var(--section-height);
+
+    min-height: calc(var(--section-height)*1.5);
+    min-width: calc(var(--section-height)*1.5);
     max-width: 80%;
     color: var(--accent-clr-dark);
     transform: translate(-50%, -50%) scale(0);
-    z-index: 1000;
+    z-index: 10;
     transition: all 500ms ease;
     border: 1px solid black;
     border-radius: 0.5rem;
@@ -139,12 +144,12 @@ body{
 #cart_card.active{
 
 
-    z-index: 1000;
     transform: translate(-50%, -50%) scale(1);
-
     transition: all 500ms ease;
 
 }
+
+
 
 #brownie_card{
     background-image: url(images/brownies1.jpg);
@@ -167,7 +172,6 @@ body{
 .explore_section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* min-height: var(--section-height); */
     align-items: center;
     justify-content: center;
     margin: 0;
