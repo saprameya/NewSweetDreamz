@@ -13,6 +13,8 @@
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+
+
 }
 
 body{
@@ -285,11 +287,21 @@ footer{
     .navbar ul{
         width: 100%;
         padding: 0;
-    }
-    .navbar a{
         font-size: 1.5rem;
+
+    }
+    
+
+    #cart_card{
+        min-height: calc(var(--section-height));
+        min-width: calc(var(--section-height));
+
+    }
+    .cart_header button{
+        margin-left: 50%;
     }
 
+    
     .card_wrapper{
         padding: 0.5rem;
     }
@@ -313,11 +325,19 @@ footer{
     .navbar ul{
         width: 100%;
         padding: 0;
+        font-size: 1.5rem;
+
     }
 
-    .navbar a {
-        font-size: 1.5rem;
+    #cart_card{
+        min-height: calc(var(--section-height));
+        min-width: calc(var(--section-height));
+
     }
+    .cart_header button{
+        margin-left: 50%;
+    }
+    
     .card_section{ 
         grid-template-columns: 1fr;
         min-height: calc(var(--section-height)*3);
