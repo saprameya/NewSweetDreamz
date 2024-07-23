@@ -250,7 +250,9 @@ footer{
 
     }
 
-
+    .navbar li:hover, .navbar a:hover{
+        color: hsl(120, 98%, 48%);
+    }
     .card{
         overflow: hidden;
     }
