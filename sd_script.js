@@ -34,3 +34,36 @@ function closeCart (cart){
     if (cart == null) return;
     cart.classList.remove('active');
 }
+
+const brownie = document.querySelector('#brownie_card');
+const chocChip = document.querySelector('#choc_chip_card');
+const dblChocChip = document.querySelector('#dbl_choc_chip_card');
+
+function addVisibleClass(entries){
+    entries.forEach(entry => {
+        const visible = entry.target;
+
+        if(entry.isIntersecting){
+           console.log(entry.target);
+           visible.classList.add('visible');
+           console.log(visible.classList);
+        }
+           else{ 
+            visible.classList.remove('visible');
+
+           }
+
+    })
+}
+
+const options = {
+    // rootMarin: "500px",
+    threshold: 1
+}
+
+const observer = new IntersectionObserver(addVisibleClass, options);
+
+observer.observe(brownie);
+observer.observe(chocChip);
+observer.observe(dblChocChip);
+

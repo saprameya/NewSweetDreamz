@@ -186,6 +186,21 @@ body{
 
 }
 
+.card{
+    overflow: hidden;
+}
+
+.card_section .card >.card_wrapper{
+    transform: translateY(calc(var(--section-height) - 5rem));
+}
+
+
+
+
+.explore_section .card_wrapper{
+    transform: translateY(0);
+    background-color: transparent;
+}
 
 #menu_card{
     background-image: url(images/menu.jpg);
@@ -226,7 +241,6 @@ footer{
     min-height: calc(var(--section-height)/3);
 }
 
-
 @media (hover) {
 
     .hero{
@@ -253,38 +267,29 @@ footer{
     .navbar li:hover, .navbar a:hover{
         color: hsl(120, 98%, 48%);
     }
-    .card{
-        overflow: hidden;
-    }
-
-    .card_section .card >.card_wrapper{
-        transform: translateY(calc(var(--section-height) - 5rem));
-    }
     .card_section .card:hover .card_wrapper{    
         transform: translateY(calc(var(--section-height) - 20rem));
         transition: transform 1000ms ease;
         overflow: visible;
         background-color: hsl(24 64% 16%/ 0.7);
-
+    
     }
-
-    #brownie_card:hover {
+    
+    
+    #brownie_card:hover{
         background-image: url(images/brownies2.jpg);
     }
-    #choc_chip_card:hover {
+    #choc_chip_card:hover{
         background-image: url(images/choc_chip2.jpg);
     }
-    #dbl_choc_chip_card:hover {
+    #dbl_choc_chip_card:hover{
         background-image: url(images/dbl_choc_chip2.jpg);
     }
 
-    .explore_section .card_wrapper{
-        transform: translateY(0);
-        background-color: transparent;
-    }
-}
 
-@media screen and (max-width:767px) {
+}      
+
+@media screen and (max-width:1027px) {
 
     .hero_wrapper{
         min-height: calc(var(--section-height)*1.5);
@@ -322,15 +327,34 @@ footer{
         min-height: calc(var(--section-height)*3);
         gap: 1rem;
     }
-
+    
+    .card.visible .card_wrapper {    
+        transform: translateY(calc(var(--section-height) - 20rem));
+        transition: transform 1000ms ease;
+        overflow: visible;
+        background-color: hsl(24 64% 16%/ 0.7);
+    
+    }
+    
+    
+    #brownie_card.visible{
+        background-image: url(images/brownies2.jpg);
+    }
+    #choc_chip_card.visible {
+        background-image: url(images/choc_chip2.jpg);
+    }
+    #dbl_choc_chip_card.visible {
+        background-image: url(images/dbl_choc_chip2.jpg);
+    }
     .explore_section{
         grid-template-columns: 1fr;
         gap: 1rem;
-    }
+        height: calc(var(--section-height)*1.5);
+    } 
     
 }
 
-@media screen and (min-width:768px) and (max-width:1027px) {
+/* @media screen and (min-width:768px) and (max-width:1027px) {
 
     .hero_wrapper{
         min-height: calc(var(--section-height)*1.5);
@@ -365,4 +389,4 @@ footer{
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-}
+} */
