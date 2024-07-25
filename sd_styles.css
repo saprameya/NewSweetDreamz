@@ -291,19 +291,36 @@ footer{
 
 @media screen and (max-width:1027px) {
 
-    .hero_wrapper{
-        min-height: calc(var(--section-height)*1.5);
+    .hero{
+        display: block;
+        align-items: center;
+        height: fit-content;
     }
+    /* .hero_wrapper{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        
+    } */
 
     .hero_content_wrapper{
-        transform: translateY(calc(var(--section-height)*5/8));
+        transform: translateY(calc(var(--section-height))*3/8);
+
+    }
+
+    .navbar{
+        /* min-height: var(--section-height); */
+        
     }
 
     .navbar ul{
         width: 100%;
         padding: 0;
         font-size: 1.5rem;
-
+        grid-template-columns: 1fr;
+        /* transform: translateY(10%); */
+        line-height: 3rem;
+        margin-top: calc(var(--section-height)/8);
     }
     
 

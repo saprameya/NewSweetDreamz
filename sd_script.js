@@ -35,10 +35,6 @@ function closeCart (cart){
     cart.classList.remove('active');
 }
 
-// const brownie = document.querySelector('#brownie_card');
-// const chocChip = document.querySelector('#choc_chip_card');
-// const dblChocChip = document.querySelector('#dbl_choc_chip_card');
-
 const treats = document.querySelectorAll('[data-treat-card]');
 
 
@@ -56,7 +52,6 @@ function addVisibleClass(entries){
         }
 
     }), 500)
-    
 }
 
 const options = {
@@ -66,8 +61,7 @@ const options = {
 
 const observer = new IntersectionObserver(addVisibleClass, options);
 treats.forEach(treat => {
-observer.observe(treat);
-    
+    observer.observe(treat);
 });
 
 
