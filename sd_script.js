@@ -5,7 +5,7 @@ openCartButtons.forEach(button =>{
     button.addEventListener('click', () => {
     console.log(button.id);
 
-        const cart = document.querySelector(button.dataset.cartTarget);
+    const cart = document.querySelector(button.dataset.cartTarget);
     console.log(cart.classList);
 
         console.log(document.querySelector(button.dataset.cartTarget))
