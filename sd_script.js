@@ -44,21 +44,23 @@ const treats = document.querySelectorAll('[data-treat-card]');
 
 
 function addVisibleClass(entries){
-    entries.forEach(entry => {
+
+    setTimeout(() => entries.forEach(entry => {
         const visible = entry.target;
 
         if(entry.isIntersecting){
            visible.classList.add('visible');
         }
-           else{ 
-            visible.classList.remove('visible');
-           }
+        else{ 
+        visible.classList.remove('visible');
+        }
 
-    })
+    }), 500)
+    
 }
 
 const options = {
-    // rootMarin: "500px",
+    rootMarin: "500px",
     threshold: 1
 }
 
