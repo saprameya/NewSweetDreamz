@@ -101,16 +101,17 @@ body{
 .cart_link{
     cursor: pointer;
 }
-.cart_header{
+.cart_header, .contact_header{
     display: flex;
-    padding: 1rem;
+    /* padding: 1rem; */
+    justify-content: space-between;
+
 }
-.cart_header button{
+.cart_header button, .contact_close_button{
     background-color: var(--primary-clr);
     background-color: var(--primary-clr);
     border: none;
     float: right;
-    margin-left: 75%;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -124,14 +125,51 @@ body{
     z-index: 8;
 }
 #cart_card{
+    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
     background-color: var(--primary-clr);
     opacity: 1;
-
-    min-height: calc(var(--section-height)*1.5);
+    padding: 1rem;
+    /* min-height: calc(var(--section-height)*1.5);
     min-width: calc(var(--section-height)*1.5);
+    max-width: 80%; */
+    color: var(--accent-clr-dark);
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    transition: all 500ms ease;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    background-color: hsl(0 0% 0% /.7);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 9;
+    transform: scale(0);
+}
+
+.overlay.active{
+    transform: scale(1);
+}
+
+#contact_card{
+    display: flex;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    background-color: var(--primary-clr);
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
     max-width: 80%;
     color: var(--accent-clr-dark);
     transform: translate(-50%, -50%) scale(0);
@@ -139,11 +177,23 @@ body{
     transition: all 500ms ease;
     border: 1px solid black;
     border-radius: 0.5rem;
-    overflow: visible;
-
+    padding: 1rem ;
+    
 }
 
-#cart_card.active{
+.contact_card div{
+    padding: 1.5rem;
+
+}
+.contact_card h2{
+    margin-bottom: 1rem;
+}
+
+.contact_close_button{
+    margin: 0;
+}
+
+#cart_card.active, #contact_card.active{
 
 
     transform: translate(-50%, -50%) scale(1);
@@ -374,5 +424,17 @@ footer{
 
     .card.visible .card_wrapper {    
         transform: translateY(calc(var(--section-height) - (--section-height)/3));
+    }
+    
+    #contact_card{
+        width: 100%;
+        min-height: 0;
+        
+    }
+
+    #contact_card *{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
     }
 }

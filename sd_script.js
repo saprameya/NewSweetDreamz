@@ -1,14 +1,12 @@
+// to display shopping cart
+
 const openCartButtons = document.querySelectorAll('[data-cart-target]');
 const closeCartButtons = document.querySelectorAll('[data-cart-close-button]');
+const overlay = document.querySelector('.overlay');
 
 openCartButtons.forEach(button =>{
     button.addEventListener('click', () => {
-    console.log(button.id);
-
     const cart = document.querySelector(button.dataset.cartTarget);
-    console.log(cart.classList);
-
-        console.log(document.querySelector(button.dataset.cartTarget))
         openCart(cart);
     });
 });
@@ -23,21 +21,20 @@ closeCartButtons.forEach(button =>{
 });
 
 function openCart (cart){
-    console.log("here");
-
     if (cart == null) return;
     cart.classList.add('active');
-    console.log(cart.classList);
+    overlay.classList.add('active');
+    console.log(overlay.classList);
 }
 
 function closeCart (cart){
     if (cart == null) return;
     cart.classList.remove('active');
+    overlay.classList.remove('active');
 }
 
+// to animate treat cards on mobile devices
 const treats = document.querySelectorAll('[data-treat-card]');
-
-
 
 function addVisibleClass(entries){
 
@@ -64,4 +61,30 @@ treats.forEach(treat => {
     observer.observe(treat);
 });
 
+// to display contact information
+const contactButtons = document.querySelectorAll('[data-contact-target]');
+const closeContactButtons = document.querySelectorAll('[data-contact-close-button]');
+contactButtons.forEach(button =>{
+    
+    button.addEventListener('click', () =>{
+        const contactCard = document.querySelector(button.dataset.contactTarget);
+        openContactCard(contactCard);
+    })
+})
 
+function openContactCard(contactCard){
+    contactCard.classList.add('active');
+    overlay.classList.add('active');
+}
+
+closeContactButtons.forEach(button =>{
+    button.addEventListener('click', () => {
+        const contactCard = button.closest('#contact_card');
+        closeContactCard(contactCard);
+    });
+});
+
+function closeContactCard(contactCard){
+    contactCard.classList.remove('active');
+    overlay.classList.remove('active');
+}
