@@ -242,6 +242,7 @@ body{
 
 .card_section .card .card_wrapper{
     transform: translateY(calc(var(--section-height) - 5rem));
+    padding: 0.5rem;
 }
 
 
@@ -289,6 +290,7 @@ body{
 }
 footer{
     min-height: calc(var(--section-height)/3);
+    color: var(--accent-clr-dark);
 }
 
 @media (hover) {
@@ -386,7 +388,7 @@ footer{
         gap: 1rem;
     }
     .card_section .card .card_wrapper{
-        transform: translateY(calc(var(--section-height) - 7rem));
+        transform: translateY(calc(var(--section-height) - 6rem));
     }
     
     .card.visible .card_wrapper {    
