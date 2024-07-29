@@ -303,25 +303,23 @@ footer{
     
 }
 
-.review_card_wrapper{
-    display: grid;
-
-    
-}
 .review_card{
     color: var(--accent-clr-dark);
-    min-width: 90%;
-    max-width: 90%;
-    max-height: 90%;
+    /* min-width: 90%; */
+    /* max-width: 80%; */
+    /* max-height: 90%; */
     /* border: 1px solid var(--accent-clr-dark); */
     border-radius: 0.5rem;
     padding: 0.5rem;
     background-image: url(images/balloon-34420_1280.png);
     background-repeat: no-repeat;
     background-size: contain;
-
     
 
+}
+
+.review_card *{
+    width: 40ch;
 }
 
 .review_card h2{
@@ -330,12 +328,12 @@ footer{
 }
 .review_card p {
    transform: translateY(7rem);
-   padding: 0 2rem;
+   padding: 0 5rem;
 }
 
 #reviewer_name{
-    display: flex;
-    float: right;
+    display: block;
+    text-align: right;
 }
 @media (hover) {
 
@@ -466,7 +464,9 @@ footer{
        
     }
 
-
+    .review_card *{
+        width: 35ch;
+    }
      .review_card {
         background-size: contain;
         min-height: calc(var(--section-height));
@@ -474,10 +474,10 @@ footer{
     }
 
     .review_card h2{
-        translate: 1.1rem 0.2rem;
+        translate: 1.1rem 0.3rem;
     }
     .review_card p{
-        transform: translateY(0);
+        transform: translateY(2rem);
 
     }
 
@@ -505,6 +505,9 @@ footer{
         padding: 1rem;
     }
 
+    .review_card *{
+        width: 35ch;
+    }
     .review_card h2{
         translate: 5rem 5rem;
     }
@@ -512,5 +515,10 @@ footer{
         transform: translateY(10rem);
         max-width: 70%;
 
+    }
+
+    #reviewer_name{
+        display: block;
+        text-align: right;
     }
 }
