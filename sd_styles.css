@@ -289,10 +289,47 @@ body{
     padding: 0.5rem;
 }
 footer{
-    min-height: calc(var(--section-height)/3);
+    /* min-height: calc(var(--section-height)/3); */
     color: var(--accent-clr-dark);
 }
 
+.review_section_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem 0;
+    min-height: 100vh;
+    gap: 2rem;
+    justify-items: center;
+    
+}
+
+.review_card_wrapper{
+    display: grid;
+    
+}
+.review_card{
+    color: var(--accent-clr-dark);
+    min-width: 90%;
+    max-width: 90%;
+    max-height: 90%;
+    /* border: 1px solid var(--accent-clr-dark); */
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-image: url(images/balloon-34420_1280.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+
+}
+.review_card * {
+   transform: translateY(20%);
+   padding: 0 2rem;
+}
+
+#reviewer_name{
+    display: flex;
+    float: right;
+}
 @media (hover) {
 
     .hero{
