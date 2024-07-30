@@ -409,14 +409,14 @@ footer{
     }
     
 
-    #cart_card{
+    /* #cart_card{
         min-height: calc(var(--section-height));
         min-width: calc(var(--section-height));
 
     }
     .cart_header button{
         margin-left: 50%;
-    }
+    } */
 
     
     .card_wrapper{
