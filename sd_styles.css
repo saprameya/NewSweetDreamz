@@ -470,15 +470,20 @@ footer{
      .review_card {
         background-size: contain;
         min-height: calc(var(--section-height));
-        
+        max-width: 90vw;
     }
 
     .review_card h2{
-        translate: 1.1rem 0.3rem;
+        translate: 1.1rem 1rem;
     }
     .review_card p{
         transform: translateY(2rem);
+       
 
+    }
+
+    #reviewer_name{
+        transform: translateX(-2rem);
     }
 
 }
@@ -506,15 +511,17 @@ footer{
     }
 
     .review_card *{
-        width: 35ch;
+        width: 50ch;
+        
     }
     .review_card h2{
-        translate: 5rem 5rem;
+        translate: 5rem 10rem;
     }
     .review_card p{
         transform: translateY(10rem);
-        max-width: 70%;
-
+        max-width: 90%;
+        transform: translateX(5rem);
+        transform: translatey(15rem);
     }
 
     #reviewer_name{
