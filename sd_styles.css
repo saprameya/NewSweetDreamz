@@ -114,6 +114,7 @@ body{
     float: right;
     font-size: 2rem;
     cursor: pointer;
+    color: var(--accent-clr-dark);
 }
 .card_section .card_wrapper{
     background: radial-gradient(hsl(24 64% 16% /0.8) 20%,
@@ -262,6 +263,11 @@ body{
     background-image: url(images/contact-us.jpg);
 
 }
+
+#contact_card a{
+    color: var(--accent-clr-dark);
+}
+
 #reviews_card{
     background-image: url(images/reviews.jpg);
 
@@ -369,6 +375,14 @@ tr{
 
 .menu_table tr td:nth-child(2){
     text-align: left;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --primary-clr: hsl(0, 0%, 0%); 
+        --accent-clr-dark: hsl(0, 3%, 65%); 
+        --font-clr: hsl(49, 96%, 79%); 
+    }
 }
 @media (hover) {
 

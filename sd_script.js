@@ -7,6 +7,7 @@ const overlay = document.querySelector('.overlay');
 openCartButtons.forEach(button =>{
     button.addEventListener('click', () => {
     const cart = document.querySelector(button.dataset.cartTarget);
+    
         openCart(cart);
     });
 });
@@ -24,7 +25,6 @@ function openCart (cart){
     if (cart == null) return;
     cart.classList.add('active');
     overlay.classList.add('active');
-    console.log(overlay.classList);
 }
 
 function closeCart (cart){
@@ -88,3 +88,4 @@ function closeContactCard(contactCard){
     contactCard.classList.remove('active');
     overlay.classList.remove('active');
 }
+
